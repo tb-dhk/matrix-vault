@@ -1,0 +1,20 @@
+.pona, .callout[data-callout="pona"] {
+  font-family: 'Fairfax Pona HD', 'Fairfax Pona', 'Fairfax HD', 'Fairfax', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.callout[data-callout="pona"] {
+  margin: unset;
+  border: unset;
+  border-radius: unset;
+  padding: unset;
+  background: unset;
+  mix-blend-mode: normal;
+
+  & > .callout-title { 
+    font-size: 20px
+  };
+
+  .callout-icon {
+    display: none
+  }
+}

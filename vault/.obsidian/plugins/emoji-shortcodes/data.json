@@ -1,0 +1,13 @@
+{
+  "immediateReplace": true,
+  "suggester": true,
+  "historyPriority": true,
+  "historyLimit": 100,
+  "history": [
+    ":purple_heart:",
+    ":thinking:",
+    ":white_check_mark:",
+    ":x:",
+    ":tm:"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "help.md": {
+    "title": "where am i?",
+    "date": "2008-01-15",
+    "tags": [
+      "origin"
+    ],
+    "number": 0,
+    "hide": false,
+    "description": "the beginning of time."
+  },
+  "404.md": {
+    "title": "?",
+    "date": "2008-01-15",
+    "tags": [
+      "origin"
+    ],
+    "number": 0,
+    "hide": false,
+    "description": "did you lose your way?"
+  },
+  "development/dev diaries/we are 1/0.0.1.md": {
+    "title": "we are 1: dev diary 1",
+    "date": "2025-06-22",
+    "tags": [
+      "dev-diary",
+      "we-are-1"
+    ],
+    "number": 1,
+    "hide": true,
+    "description": "my first dev diary"
+  },
+  "development/dev diaries/misc/matrix.md": {
+    "title": "we are 1: dev diary 1",
+    "date": "2025-06-22",
+    "tags": [
+      "dev-diary",
+      "matrix"
+    ],
+    "number": 1,
+    "hide": true,
+    "description": "my first dev diary"
+  }
+}
