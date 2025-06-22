@@ -1,7 +1,7 @@
 {
-  "series": [
-    "/development/dev diaries/we are 1"
-  ],
+  "series": {
+    "/development/dev diaries/we are 1": "a dev diary for my upcoming game, we are 1."
+  },
   "pinned": [
     "/help",
     "/development/dev diaries/we are 1/0.0.1",
