@@ -1,6 +1,9 @@
 {
   "series": {
-    "/development/dev diaries/we are 1": "a dev diary for my upcoming game, we are 1."
+    "/development/dev diaries/we are 1": {
+      "name": "we are 1 dev diaries",
+      "description": "a dev diary for my upcoming game, we are 1."
+    }
   },
   "pinned": [
     "/help",
