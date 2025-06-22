@@ -1,5 +1,5 @@
 {
-  "404": {
+  "/404": {
     "title": "?",
     "date": "2008-01-15",
     "tags": [
@@ -9,7 +9,7 @@
     "hide": false,
     "description": "did you lose your way?"
   },
-  "help": {
+  "/help": {
     "title": "where am i?",
     "date": "2008-01-15",
     "tags": [
@@ -19,7 +19,7 @@
     "hide": false,
     "description": "the beginning of time."
   },
-  "development/dev diaries/misc/matrix": {
+  "/development/dev diaries/misc/matrix": {
     "title": "matrix: dev diary",
     "date": "2025-06-22",
     "tags": [
@@ -30,7 +30,7 @@
     "hide": true,
     "description": "my first dev diary"
   },
-  "development/dev diaries/we are 1/0.0.1": {
+  "/development/dev diaries/we are 1/0.0.1": {
     "title": "we are 1: dev diary 1",
     "date": "2025-06-22",
     "tags": [
