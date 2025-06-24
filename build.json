@@ -1,0 +1,44 @@
+{
+  "/404": {
+    "title": "?",
+    "date": "2008-01-15",
+    "tags": [
+      "origin"
+    ],
+    "number": 0,
+    "hide": false,
+    "description": "did you lose your way?"
+  },
+  "/help": {
+    "title": "where am i?",
+    "date": "2008-01-15",
+    "tags": [
+      "origin"
+    ],
+    "number": 0,
+    "hide": false,
+    "description": "the beginning of time."
+  },
+  "/development/dev diaries/misc/matrix": {
+    "title": "matrix: dev diary",
+    "date": "2025-06-22",
+    "tags": [
+      "dev-diary",
+      "matrix"
+    ],
+    "number": 0,
+    "hide": true,
+    "description": "my first dev diary"
+  },
+  "/development/dev diaries/we are 1/0.0.1": {
+    "title": "we are 1: trainee system",
+    "date": "2025-06-22",
+    "tags": [
+      "dev-diary",
+      "we-are-1"
+    ],
+    "number": 1,
+    "hide": true,
+    "description": "my first dev diary"
+  }
+}
