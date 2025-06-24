@@ -3,13 +3,11 @@ const { put, list, del } = require('@vercel/blob');
 const fs = require('fs');
 const path = require('path');
 
-const EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload-to-vercel.js'];
+const EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload-to-vercel.js', 'timestamp.txt'];
 const EXCLUDED_DIRS = ['.obsidian', '.git', '.github'];
 
-async function uploadFolder(localPath, remotePrefix = '') {
+async function uploadFolder(localPath, remotePrefix = '', timestamp) {
   const entries = fs.readdirSync(localPath, { withFileTypes: true });
-
-  const timestamp = new Date().toISOString().replace(/[-:]/g, '').slice(0,15); // e.g. 20240624T1530
 
   for (const entry of entries) {
     const entryPath = path.join(localPath, entry.name);
@@ -20,7 +18,7 @@ async function uploadFolder(localPath, remotePrefix = '') {
     if (entry.isDirectory()) {
       if (EXCLUDED_DIRS.includes(entry.name)) continue;
       const remotePath = path.posix.join(remotePrefix, entry.name);
-      await uploadFolder(entryPath, remotePath);
+      await uploadFolder(entryPath, remotePath, timestamp);
     } else {
       // modify filename to include timestamp before extension
       const ext = path.extname(entry.name);          // '.md' or '.json'
@@ -41,17 +39,34 @@ async function uploadFolder(localPath, remotePrefix = '') {
 
 async function clearAll() {
   const { blobs } = await list();
-  for (const blobPath of blobs) {
-    await del(blobPath.url);
+  for (const blob of blobs) {
+    await del(blob.url);
   }
 }
 
 async function main() {
-  console.log("clearing all")
+  // generate timestamp once
+  const timestamp = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15); // e.g. 20240624T1530
+
+  // write timestamp.txt locally
+  fs.writeFileSync('timestamp.txt', timestamp);
+
+  // clear old blobs
+  console.log("clearing all");
   await clearAll();
 
-  console.log("uploading all")
-  await uploadFolder('.', '');
+  // upload timestamp.txt (without timestamp in filename)
+  const timestampBuffer = Buffer.from(timestamp);
+  await put('timestamp.txt', timestampBuffer, {
+    access: 'public',
+    allowOverwrite: true,
+    multipart: true
+  });
+  console.log(`uploaded: timestamp.txt`);
+
+  // upload rest of files with timestamp suffix
+  console.log("uploading all files");
+  await uploadFolder('.', '', timestamp);
 }
 
 main();
