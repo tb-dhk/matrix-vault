@@ -49,6 +49,7 @@ async function main() {
   const timestamp = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15); // e.g. 20240624T1530
 
   // write timestamp.txt locally
+  console.log("timestamp", timestamp)
   fs.writeFileSync('timestamp.txt', timestamp);
 
   // clear old blobs
