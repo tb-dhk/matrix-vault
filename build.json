@@ -1,4 +1,14 @@
 {
+  "/help": {
+    "title": "where am i?",
+    "date": "2008-01-15",
+    "tags": [
+      "origin"
+    ],
+    "number": 0,
+    "hide": false,
+    "description": "landing point"
+  },
   "/404": {
     "title": "?",
     "date": "2008-01-15",
@@ -9,7 +19,7 @@
     "hide": false,
     "description": "did you lose your way?"
   },
-  "/help": {
+  "/folder/test file": {
     "title": "where am i?",
     "date": "2008-01-15",
     "tags": [
