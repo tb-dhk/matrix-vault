@@ -1,7 +1,7 @@
-require('dotenv').config();
-const { put } = require('@vercel/blob');
-const fs = require('fs');
-const path = require('path');
+import 'dotenv/config';
+import { list, put, del } from '@vercel/blob';
+import fs from 'fs';
+import path from 'path';
 
 const EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload-to-vercel.js'];
 const EXCLUDED_DIRS = ['.obsidian', '.git', '.github'];
@@ -16,7 +16,7 @@ async function uploadFolder(localPath, remotePrefix = '') {
     if (EXCLUDED.includes(entry.name)) continue;
 
     if (entry.isDirectory()) {
-      if (EXCLUDED_DIRS.includes(entry.name)) continue; 
+      if (EXCLUDED_DIRS.includes(entry.name)) continue;
       await uploadFolder(entryPath, remotePath);
     } else {
       const buffer = fs.readFileSync(entryPath);
@@ -25,13 +25,24 @@ async function uploadFolder(localPath, remotePrefix = '') {
         allowOverwrite: true,
         multipart: true
       });
-      console.log(`✅ Uploaded: ${remotePath} → ${result.url}`);
+      console.log(`uploaded: ${remotePath}`);
     }
   }
 }
 
-async function main() {
-  await uploadFolder('.', '');                   
+async function clearAll() {
+  const { blobs } = await list();
+  for (const blobPath of blobs) {
+    await del(blobPath);
+  }
 }
 
-main();
+async function main() {
+  console.log("clearing all")
+  await clearAll();
+
+  console.log("uploading all")
+  await uploadFolder('.', '');
+}
+
+main().catch(console.error);
