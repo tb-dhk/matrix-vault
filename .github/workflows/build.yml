@@ -49,3 +49,15 @@ jobs:
 
     - name: Run upload to Vercel script
       run: node upload-to-vercel.js
+
+    - name: Commit and push updated timestamp.txt
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git add timestamp.txt
+        git diff --cached --quiet || git commit -m "auto-build: update build.json"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
