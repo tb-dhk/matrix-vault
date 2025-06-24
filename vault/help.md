@@ -5,11 +5,15 @@ tags:
   - origin
 number: 0
 hide: false
-description: the beginning of time.
+description: landing point
 ---
 # where am i?
-you have now entered the realm of the matrix.
+you are in the **matrix**, where i live.
+# who are you?
+great question.
+# what is this for?
+this is where i put all my thoughts online. a blog of sorts. i might use this to dump random ideas, write full essays, or just document things i've been doing.
 # what do i do here?
-read.
+read. that's all there is to do.
 # how do i get around?
-you can begin at the homepage, or use the navigation bar.
+you can begin at the homepage, or enter a path or search term in the navigation bar. you can also browse tags and series, and if you really want, explore the directory tree.
