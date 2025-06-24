@@ -1,7 +1,7 @@
-import 'dotenv/config';
-import { put } from '@vercel/blob';
-import fs from 'fs';
-import path from 'path';
+require('dotenv').config();
+const { put } = require('@vercel/blob');
+const fs = require('fs');
+const path = require('path');
 
 const EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload-to-vercel.js'];
 const EXCLUDED_DIRS = ['.obsidian', '.git', '.github'];
