@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { put, list } = require('@vercel/blob');
+const { put, list, del } = require('@vercel/blob');
 const fs = require('fs');
 const path = require('path');
 
@@ -29,7 +29,7 @@ async function uploadFolder(localPath, remotePrefix = '') {
       const remotePath = path.posix.join(remotePrefix, timestampedName);
 
       const buffer = fs.readFileSync(entryPath);
-      const result = await put(remotePath, buffer, {
+      await put(remotePath, buffer, {
         access: 'public',
         allowOverwrite: true,
         multipart: true
@@ -54,4 +54,4 @@ async function main() {
   await uploadFolder('.', '');
 }
 
-main().catch(console.error);
+main();
