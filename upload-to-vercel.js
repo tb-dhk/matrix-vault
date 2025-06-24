@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { put } = require('@vercel/blob');
+const { put, list } = require('@vercel/blob');
 const fs = require('fs');
 const path = require('path');
 
