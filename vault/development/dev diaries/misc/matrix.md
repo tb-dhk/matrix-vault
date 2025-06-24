@@ -28,4 +28,4 @@ please let me know. contact me directly through any means (discord at tbdhk is p
 # what is the "help" page for?
 i thought it would be cool to have a few "lore documents". leave me alone.
 
-that said, all of the "lore documents" will be under the <Tag name="origin" />.
+that said, all of the "lore documents" will be under the [origin tag](/tags/origin).
