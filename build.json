@@ -1,32 +1,35 @@
 {
-  "/help": {
-    "title": "where am i?",
-    "date": "2008-01-15",
-    "tags": [
-      "origin"
-    ],
-    "number": 0,
-    "hide": false,
-    "description": "landing point"
-  },
   "/404": {
     "title": "?",
     "date": "2008-01-15",
     "tags": [
+      "matrix",
       "origin"
     ],
     "number": 0,
     "hide": false,
     "description": "did you lose your way?"
   },
-  "/folder/test file": {
+  "/help": {
     "title": "where am i?",
     "date": "2008-01-15",
     "tags": [
+      "matrix",
       "origin"
     ],
     "number": 0,
     "hide": false,
     "description": "landing point"
+  },
+  "/development/dev diaries/misc/matrix": {
+    "title": "matrix: dev diary",
+    "date": "2025-06-24",
+    "tags": [
+      "dev-diary",
+      "matrix"
+    ],
+    "number": 0,
+    "hide": false,
+    "description": "my first dev diary"
   }
 }
