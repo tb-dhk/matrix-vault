@@ -42,7 +42,7 @@ async function uploadFolder(localPath, remotePrefix = '') {
 async function clearAll() {
   const { blobs } = await list();
   for (const blobPath of blobs) {
-    await del(blobPath);
+    await del(blobPath.url);
   }
 }
 
