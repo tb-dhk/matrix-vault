@@ -20,10 +20,16 @@ async function uploadFolder(localPath, remotePrefix = '', timestamp) {
       const remotePath = path.posix.join(remotePrefix, entry.name);
       await uploadFolder(entryPath, remotePath, timestamp);
     } else {
-      // modify filename to include timestamp before extension
-      const ext = path.extname(entry.name);          // '.md' or '.json'
-      const baseName = path.basename(entry.name, ext); // 'filename'
-      const timestampedName = `${baseName}.${timestamp}${ext}`; // 'filename.20240624T1530.md'
+      const ext = path.extname(entry.name);                  // e.g. '.md'
+      const baseName = path.basename(entry.name, ext);       // e.g. 'filename'
+
+      // only timestamp .md or .json files
+      const shouldTimestamp = ext === '.md' || ext === '.json';
+
+      const timestampedName = shouldTimestamp
+        ? `${baseName}.${timestamp}${ext}`
+        : entry.name;
+
       const remotePath = path.posix.join(remotePrefix, timestampedName);
 
       const buffer = fs.readFileSync(entryPath);
