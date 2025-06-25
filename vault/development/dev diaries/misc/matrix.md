@@ -8,7 +8,7 @@ number: 0
 hide: false
 description: my first dev diary
 ---
-hi! this is my first actual post on *matrix*, my new digital garden. this is a project that i spent a few days on. here are some questions i figured would be helpful
+hi! this is my first actual post on *matrix*, my new digital garden. this is a project that i spent a few days on. here are some questions i figured would be helpful.
 # what is *matrix* and why did you make it?
 matrix is a digital garden, a place where i can put my ideas and possibly expand on them.
 
