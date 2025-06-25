@@ -2,7 +2,11 @@
   "series": {
     "/development/dev diaries/we are 1": {
       "name": "we are 1 dev diaries",
-      "description": "a dev diary for my upcoming game, we are 1."
+      "description": "dev diaries for my upcoming game, we are 1."
+    },
+    "/development/dev diaries/matrix": {
+      "name": "matrix dev diaries",
+      "description": "dev diaries for this website!"
     }
   },
   "pinned": [

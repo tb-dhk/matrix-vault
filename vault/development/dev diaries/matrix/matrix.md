@@ -4,7 +4,7 @@ date: 2025-06-24
 tags:
   - dev-diary
   - matrix
-number: 0
+number: 1
 hide: false
 description: my first dev diary
 ---
