@@ -8,15 +8,15 @@ number: 0
 hide: false
 description: my first dev diary
 ---
-hi! this is my first actual post on ***matrix***, my new digital garden. this is a project that i spent a few days on. here are some questions i figured would be helpful.
-# what is ***matrix*** and why did you make it?
-***matrix*** is a digital garden, a place where i can put my ideas and possibly expand on them.
+hi! this is my first actual post on **matrix**, my new digital garden. this is a project that i spent a few days on. here are some questions i figured would be helpful.
+# what is **matrix** and why did you make it?
+**matrix** is a digital garden, a place where i can put my ideas and possibly expand on them.
 
-i made ***matrix*** because i always wanted to have a blog where i could publish my thoughts, but i hated the idea of putting everything on a pre-made website like wix or (grimaces) blogger dot com...
+i made **matrix** because i always wanted to have a blog where i could publish my thoughts, but i hated the idea of putting everything on a pre-made website like wix or (grimaces) blogger dot com...
 
 i also wanted more freedom on the design and layout, and i wanted to be able to make it unique.
-# how does ***matrix*** work?
-***matrix*** is a website made with react router (frontend) and an obsidian vault (backend). both are hosted on vercel, the latter as a blob.
+# how does **matrix** work?
+**matrix** is a website made with react router (frontend) and an obsidian vault (backend). both are hosted on vercel, the latter as a blob.
 
 in simpler terms, i made the website with react, and the posts in obsidian. then i put both of these onto vercel to let everyone enjoy!
 # why not use obsidian sync or a similar digital garden maker?
