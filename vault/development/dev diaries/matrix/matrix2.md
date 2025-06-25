@@ -58,7 +58,7 @@ i am **so proud** of this animation idea. i hate doing animations in web apps us
 
 the idea behind this animation was that we'd have a list of words, and every word would be still for 2 *insert unit of time* and transitioning into the next word for 1 *unit of time*. at the moment, the full 4-word cycle (12 *units of time*) is 6 seconds (so each *unit of time* is half a second). 
 
-the transition basically treats the words that it transitions from and to (e.g. matrix and origin) as base-36 numbers. from there, based on the current second, it transitions linearly to the number. so if we were exactly halfway through the transition, the word at that moment would be (tw: **math**): 
+the transition basically treats the words that it transitions from and to (e.g. matrix and origin) as base-36 numbers. from there, based on the current second, it transitions linearly to the number. so if we were exactly halfway through the transition, the word at that moment would be (tw: **math**) $inline$: 
 
 $\frac{\text{MATRIX}_{36} + \text{ORIGIN}_{36}}{2}$
 # suffering and pain
