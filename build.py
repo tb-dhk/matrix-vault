@@ -3,6 +3,7 @@ import yaml
 import json
 
 def parse_front_matter(file_path):
+    print(file_path)
     with open(file_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
@@ -22,6 +23,8 @@ def parse_front_matter(file_path):
         print(f"YAML error in file {file_path}: {e}")
         return {}
     else:
+        if not data["tags"]:
+            data["tags"] = []
         data["tags"] = sorted(data["tags"])
         return data
 
