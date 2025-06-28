@@ -21,9 +21,20 @@
     "hide": false,
     "description": "landing point"
   },
+  "/development/dev diaries/we are 1/0.0.1": {
+    "title": "we are 1: trainee system",
+    "date": "2025-06-26",
+    "tags": [
+      "dev-diary",
+      "we-are-1"
+    ],
+    "number": 1,
+    "hide": false,
+    "description": "my first dev diary"
+  },
   "/development/dev diaries/matrix/matrix": {
     "title": "matrix: dev diary",
-    "date": "2025-06-24",
+    "date": "2025-06-25",
     "tags": [
       "dev-diary",
       "matrix"
