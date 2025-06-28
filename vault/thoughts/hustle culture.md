@@ -4,7 +4,7 @@ date: 2025-06-28
 tags:
   - rant
 number: 0
-hide: true
+hide: false
 description: ts pmo icl
 ---
 i would just like to preface this by saying this was originally written as a practice gp essay. i have since rearranged it for my own purposes.
