@@ -6,7 +6,7 @@ tags:
   - matrix
   - dev-diary
 number: 2
-hide: true
+hide: false
 ---
 i'm beginning to realise, after drafting out the first we are 1 dev diary, that my original matrix dev diary was very overly short. it was more of a faq page than a dev diary to be completely honest. there's no actual documentation of how it works other than the platforms i used. so i thought i'd just talk about it here for anyone who's interested!
 
