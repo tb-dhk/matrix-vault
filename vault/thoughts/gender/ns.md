@@ -3,7 +3,7 @@ title: i am terrified of ns
 date: 2008-01-15
 tags:
   - rant
-number: 0
+number: 2
 hide: true
 description: someone help me please.
 ---

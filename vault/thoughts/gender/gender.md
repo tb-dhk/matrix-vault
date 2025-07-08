@@ -3,7 +3,7 @@ title: none of this is real
 date: 2008-01-15
 tags:
   - rant
-number: 0
+number: 1
 hide: true
 description: like genuinely why are we making shit up
 ---

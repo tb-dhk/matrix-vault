@@ -1,7 +1,7 @@
 ---
 title: how does matrix ACTUALLY work though
 description: a sequel to the matrix dev diary
-date: 2025-06-27
+date: 2025-07-08
 tags:
   - matrix
   - dev-diary
