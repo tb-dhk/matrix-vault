@@ -5,7 +5,7 @@ tags:
   - nerd
   - math
 number: 1
-hide: true
+hide: false
 description: and how you can too!
 ---
 # introduction

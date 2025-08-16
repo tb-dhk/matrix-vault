@@ -1,15 +1,4 @@
 {
-  "/404": {
-    "title": "?",
-    "date": "2008-01-15",
-    "tags": [
-      "matrix",
-      "origin"
-    ],
-    "number": 0,
-    "hide": false,
-    "description": "did you lose your way?"
-  },
   "/help": {
     "title": "where am i?",
     "date": "2008-01-15",
@@ -20,6 +9,17 @@
     "number": 0,
     "hide": false,
     "description": "landing point"
+  },
+  "/404": {
+    "title": "?",
+    "date": "2008-01-15",
+    "tags": [
+      "matrix",
+      "origin"
+    ],
+    "number": 0,
+    "hide": false,
+    "description": "did you lose your way?"
   },
   "/development/dev diaries/we are 1/0.0.1": {
     "title": "we are 1: trainee system",
@@ -63,5 +63,16 @@
     "number": 0,
     "hide": false,
     "description": "ts pmo icl"
+  },
+  "/nerd/numbers/hex": {
+    "title": "how i learned hexadecimal",
+    "date": "2025-07-10",
+    "tags": [
+      "math",
+      "nerd"
+    ],
+    "number": 1,
+    "hide": false,
+    "description": "and how you can too!"
   }
 }
