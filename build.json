@@ -63,5 +63,16 @@
     "number": 0,
     "hide": false,
     "description": "ts pmo icl"
+  },
+  "/nerd/numbers/hex": {
+    "title": "how i learned hexadecimal",
+    "date": "2025-07-10",
+    "tags": [
+      "math",
+      "nerd"
+    ],
+    "number": 1,
+    "hide": false,
+    "description": "and how you can too!"
   }
 }
