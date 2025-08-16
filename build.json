@@ -1,15 +1,4 @@
 {
-  "/help": {
-    "title": "where am i?",
-    "date": "2008-01-15",
-    "tags": [
-      "matrix",
-      "origin"
-    ],
-    "number": 0,
-    "hide": false,
-    "description": "landing point"
-  },
   "/404": {
     "title": "?",
     "date": "2008-01-15",
@@ -20,6 +9,17 @@
     "number": 0,
     "hide": false,
     "description": "did you lose your way?"
+  },
+  "/help": {
+    "title": "where am i?",
+    "date": "2008-01-15",
+    "tags": [
+      "matrix",
+      "origin"
+    ],
+    "number": 0,
+    "hide": false,
+    "description": "landing point"
   },
   "/development/dev diaries/we are 1/0.0.1": {
     "title": "we are 1: trainee system",
