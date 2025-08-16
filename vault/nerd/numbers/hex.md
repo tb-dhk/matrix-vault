@@ -135,13 +135,13 @@ doing the same in hexadecimal is quite similar! but instead of 10, use 16, and i
 | operation   | first number | second number | method                                                                                                  | requirements             |
 | ----------- | ------------ | ------------- | ------------------------------------------------------------------------------------------------------- | ------------------------ |
 | addition    | < 8          | < 8           | instinctive                                                                                             | none                     |
-| ^           | < 8          | = 8           | 8-pair                                                                                                  | 8-pair                   |
-| ^           | < 8          | > 8           | remove 8 from the second number to treat it like the first case, then add 8 back<br>                    | ^                        |
-| ^           | ^            | ^             | form 16 with the second number and part of the first number, then add the rest of the first number back | modular additive inverse |
-| ^           | > 8          | = 8           | 8-pair + 0x10                                                                                           | 8-pair                   |
-| ^           | > 8          | > 8           | remove 8 from both numbers to treat it like the first case, then add 0x10 back                          | ^                        |
+| addition    | < 8          | = 8           | 8-pair                                                                                                  | 8-pair                   |
+| addition    | < 8          | > 8           | remove 8 from the second number to treat it like the first case, then add 8 back<br>                    | 8-pair                   |
+| addition    | < 8          | > 8           | form 16 with the second number and part of the first number, then add the rest of the first number back | modular additive inverse |
+| addition    | > 8          | = 8           | 8-pair + 0x10                                                                                           | 8-pair                   |
+| addition    | > 8          | > 8           | remove 8 from both numbers to treat it like the first case, then add 0x10 back                          | 8-pair                   |
 | subtraction | bigger       | smaller       | instinctive                                                                                             | none                     |
-| ^           | smaller      | bigger        | swap two numbers, find modular additive inverse                                                         | modular additive inverse |
+| subtraction | smaller      | bigger        | swap two numbers, find modular additive inverse                                                         | modular additive inverse |
 
 you don't exactly need to memorise this table, although it might be a good reference for you to figure out how to optimise your calculations.
 
@@ -187,12 +187,13 @@ as previously stated, the multiples of 16 are usually a good reference point dur
 | D   | 208   |
 | E   | 224   |
 | F   | 240   |
+
 it can also help to find some of these values by adding 0x50 (80) to the numbers, which only changes the tens digit and up in decimal. 
 
 to practice this, you can use [00001h (maf)'s website](https://00001h.github.io/hexp/) which has a mode just for multiples of 16 (if you press F4). note that this website only tests conversion to decimal.
 
 for this, i only managed to hit around 1.05 seconds for each conversion and plateaued there for a very long time.
 ## continue grinding
-after you're confident with multiples of 16, feel free to move on to greener pastures (and by that, i mean other numbers). [00001h (maf)'s website](https://00001h.github.io/hexp/) can be used to convert any 2-digit hexadecimal number to decimal. for me, i was satisfied enough after i was able to convert decimal to hexadecimal and back within seconds, and that was how i decided to end my journey.
+after you're confident with multiples of 16, feel free to move on to greener pastures (and by that, i mean other numbers). [00001h (maf)'s website](https://00001h.github.io/hexp/) can be used to practice conversion of any 2-digit decimal number to hexadecimal. for me, i was satisfied enough after i was able to convert decimal to hexadecimal and back within seconds, and that was how i decided to end my journey.
 # conclusion
 the main takeaway i got from this experience is that number sense is something we all really take for granted. as children, we all learn how to count in base 10, and as we grow up, we slowly learn to add and subtract, multiply and divide, and later even exponentiate. from learning all of these skills over the span of a decade, we develop an intuition for what different numbers represent and how they feel, and it becomes an integral part of how we calculate and process numbers, even if we're not actively trying to do arithmetic. this experience has really helped me to understand the importance of number sense in how we as humans count, and it's one of the many underappreciated little things in life that we should all be more grateful for.
