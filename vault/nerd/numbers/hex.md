@@ -1,6 +1,6 @@
 ---
 title: how i learned hexadecimal
-date: 2025-07-10
+date: 2025-08-16
 tags:
   - nerd
   - math
@@ -97,6 +97,7 @@ here's a reference chart to show what i mean:
 | D      | 4     | 13         |
 | E      | 5     | 14         |
 | F      | 6     | 15         |
+
 the main hurdle of this part is seeing each letter and instantly thinking of the right number in hexadecimal, and it doesn't help that A is 10 instead of 11 (which makes more sense with A1Z26). for this, it helps to have a script that forces you to convert back and forth as much as possible. for all stages, a general guideline for judging whether you are ready to move on to the next stage is when you are able to answer 1 or more question per second. personally, what i did was make a mini script for this purpose, using it to practice until i got 64 right in one minute.
 ## number sense and basic operations
 this step is a bit more complicated. after all, it requires us to go into how people process adding and subtracting mentally.
@@ -141,6 +142,7 @@ doing the same in hexadecimal is quite similar! but instead of 10, use 16, and i
 | ^           | > 8          | > 8           | remove 8 from both numbers to treat it like the first case, then add 0x10 back                          | ^                        |
 | subtraction | bigger       | smaller       | instinctive                                                                                             | none                     |
 | ^           | smaller      | bigger        | swap two numbers, find modular additive inverse                                                         | modular additive inverse |
+
 you don't exactly need to memorise this table, although it might be a good reference for you to figure out how to optimise your calculations.
 
 from the table above, it is quite evident that both *8-pair* and *complement* are important for gaining a good number sense. similarly to learning the digits, it is generally a good idea to keep converting back and forth until you can answer more than 1 question per second.
@@ -158,6 +160,7 @@ here are the *8-pairs* and *complements* for numbers 0 to 8.
 | 6            | E      | A                        |
 | 7            | F      | 9                        |
 | 8            | 0      | 8                        |
+
 after learning the digits properly, learning these should become trivial.
 ### a small hurdle
 this step took a lot longer for me mainly because i was still a bit rusty on the digits. as much as i knew how to convert them back and forth on demand, it was a bit harder for those facts to come to me intuitively. in my mind, D corresponded to 13, but i hadn't been able to fully internalise that D was *equal* to 13. however, i will say that this portion of learning is meant to feel that way.
