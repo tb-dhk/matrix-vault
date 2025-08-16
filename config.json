@@ -7,6 +7,10 @@
     "/development/dev diaries/we are 1": {
       "name": "we are 1 dev diaries",
       "description": "dev diaries for my upcoming game, we are 1."
+    },
+    "/nerd/numbers": {
+      "name": "nerding over numbers",
+      "description": "am i autistic?"
     }
   },
   "pinned": [

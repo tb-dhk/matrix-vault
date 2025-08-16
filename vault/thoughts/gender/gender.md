@@ -1,6 +1,6 @@
 ---
 title: none of this is real
-date: 2008-01-15
+date: 2025-07-10
 tags:
   - rant
 number: 1
@@ -29,7 +29,8 @@ i feel like i don't live in the same reality as most people do. like there's som
 
 it's like everyone is stuck in a rigid and gendered world that i don't want to engage in. and in this world, everyone is the same, but not remotely similar to me. it feels like no one will ever understand. 
 
-and everytime someone tells me to be a man, or that i'm going to become a man, or that i'm too sissy, i want to grab them by the fucking throat and scream:
+and everytime someone tells me to be a man, or that i'm going to become a man, or that i'm too sissy, i feel like screaming in their face to tell them to wake up.
+
 > I DON'T WANT TO BE A FUCKING MAN
 > NONE OF THIS IS REAL
 > WHY AM I THE ONLY ONE SEEING THIS
