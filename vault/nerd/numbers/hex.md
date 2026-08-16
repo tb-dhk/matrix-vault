@@ -5,7 +5,7 @@ tags:
   - nerd
   - math
 number: 1
-hide: false
+hide: true
 description: and how you can too!
 ---
 # introduction
@@ -196,4 +196,4 @@ for this, i only managed to hit around 1.05 seconds for each conversion and plat
 ## continue grinding
 after you're confident with multiples of 16, feel free to move on to greener pastures (and by that, i mean other numbers). [00001h (maf)'s website](https://00001h.github.io/hexp/) can be used to practice conversion of any 2-digit decimal number to hexadecimal. for me, i was satisfied enough after i was able to convert decimal to hexadecimal and back within seconds, and that was how i decided to end my journey.
 # conclusion
-the main takeaway i got from this experience is that number sense is something we all really take for granted. as children, we all learn how to count in base 10, and as we grow up, we slowly learn to add and subtract, multiply and divide, and later even exponentiate. from learning all of these skills over the span of a decade, we develop an intuition for what different numbers represent and how they feel, and it becomes an integral part of how we calculate and process numbers, even if we're not actively trying to do arithmetic. this experience has really helped me to understand the importance of number sense in how we as humans count, and it's one of the many underappreciated little things in life that we should all be more grateful for.
+number sense is something we all really take for granted. as children, we all learn how to count in base 10, and as we grow up, we slowly learn to add and subtract, multiply and divide, and later even exponentiate. from learning all of these skills over the span of a decade, we develop an intuition for what different numbers represent and how they feel, and it becomes an integral part of how we calculate and process numbers, even if we're not actively trying to do arithmetic. this experience has really helped me to understand the importance of number sense in how we as humans count, and it's one of the many underappreciated little things in life that we should all be more grateful for.
