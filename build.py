@@ -34,18 +34,19 @@ def traverse_and_parse(root_folder):
     result = {}
 
     for dirpath, _, filenames in os.walk(root_folder):
-        for filename in filenames:
-            if filename.endswith(".md"):
-                full_path = os.path.join(dirpath, filename)
-                relative_path = (
-                    "/"
-                    + os.path.relpath(full_path, root_folder).replace(
-                        "\\", "/"
-                    )[:-3]
-                )  # normalize path
-                front_matter = parse_front_matter(full_path)
-                if not front_matter["hide"]:
-                    result[relative_path] = front_matter
+        if not dirpath.startswith("vault/.trash"):
+            for filename in filenames:
+                if filename.endswith(".md"):
+                    full_path = os.path.join(dirpath, filename)
+                    relative_path = (
+                        "/"
+                        + os.path.relpath(full_path, root_folder).replace(
+                            "\\", "/"
+                        )[:-3]
+                    )  # normalize path
+                    front_matter = parse_front_matter(full_path)
+                    if not front_matter["hide"]:
+                        result[relative_path] = front_matter
 
     return result
 
