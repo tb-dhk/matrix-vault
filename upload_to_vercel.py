@@ -7,7 +7,7 @@ import vercel_blob
 
 load_dotenv()
 
-EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload-to-vercel.py', 'timestamp.txt', 'manifest.json']
+EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload-to-vercel.py', 'manifest.json']
 EXCLUDED_DIRS = ['.obsidian', '.git', '.github']
 
 def get_changed_files():
@@ -23,9 +23,6 @@ def get_changed_files():
         return None
 
 def main():
-    timestamp = datetime.now().strftime('%Y%m%dT%H%M%S')
-    print(f"Timestamp: {timestamp}")
-
     changed_files = get_changed_files()
     is_full_upload = changed_files is None
 
@@ -72,6 +69,7 @@ def main():
         manifest[local_path] = remote_path
 
     manifest_content = json.dumps(manifest, indent=2).encode('utf-8')
+    json.dump(manifest, open("manifest.json", "w"), indent=2)
     vercel_blob.put('manifest.json', manifest_content)
     print("uploaded: manifest.json")
 
