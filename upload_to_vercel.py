@@ -31,6 +31,19 @@ def get_changed_files():
         print("No git history? Falling back to uploading everything.")
         return None
 
+def refresh_file(manifest, local_path, remote_path):
+    old_path = manifest.get(local_path)
+    if old_path and old_path != remote_path:
+        try:
+            vercel_blob.delete(old_path)
+            print(f"deleted old version: {old_path}")
+        except Exception as e:
+            print(f"Could not delete {old_path}: {e}")
+    with open(local_path, 'rb') as f:
+        vercel_blob.put(remote_path, f.read())
+    print(f"uploaded: {remote_path}")
+
+
 def main(full=False):
     changed_files = get_changed_files()
     is_full_upload = changed_files is None or full
@@ -71,16 +84,13 @@ def main(full=False):
         remote_path = os.path.join(remote_prefix, final_name).replace('\\', '/')
         remote_path = remote_path.lstrip('./')
 
-        with open(local_path, 'rb') as f:
-            vercel_blob.put(remote_path, f.read())
-        print(f"uploaded: {remote_path}")
+        refresh_file(manifest, local_path, remote_path)
 
         manifest[local_path] = remote_path
 
-    manifest_content = json.dumps(manifest, indent=2).encode('utf-8')
-    json.dump(manifest, open("manifest.json", "w"), indent=2)
-    vercel_blob.put('manifest.json', manifest_content)
-    print("uploaded: manifest.json")
+    with open("manifest.json", "w") as f:
+        json.dump(manifest, f, indent=2)
+    refresh_file(manifest, local_path, remote_path)
 
 if __name__ == "__main__":
     main()
