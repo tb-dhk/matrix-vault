@@ -35,13 +35,12 @@ def refresh_file(manifest, local_path, remote_path):
     old_path = manifest.get(local_path)
     if old_path and old_path != remote_path:
         try:
-            # vercel_blob.delete(old_path)
+            vercel_blob.delete(old_path)
             print(f"deleted old version: {old_path}")
         except Exception as e:
             print(f"Could not delete {old_path}: {e}")
     with open(local_path, 'rb') as f:
-        # vercel_blob.put(remote_path, f.read())
-        pass
+        vercel_blob.put(remote_path, f.read())
     print(f"uploaded: {remote_path}")
 
 
@@ -91,8 +90,8 @@ def main(full=False):
     json.dump(manifest, open("manifest.json", "w"), indent=2)
     vercel_blob.delete("manifest.json")
     with open("manifest.json", 'rb') as f:
-        vercel_blob.put("manifest.json", f.read())
-    print("uploaded: manifest.json")
+        vercel_blob.put(f"manifest.{get_commit_hash()}.json", f.read())
+    print(f"uploaded: manifest.{get_commit_hash()}.json")
 
 if __name__ == "__main__":
     main(full=True)
