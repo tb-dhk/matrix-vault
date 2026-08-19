@@ -1,0 +1,79 @@
+import os
+import subprocess
+import json
+from datetime import datetime
+from dotenv import load_dotenv
+import vercel_blob
+
+load_dotenv()
+
+EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload-to-vercel.py', 'timestamp.txt', 'manifest.json']
+EXCLUDED_DIRS = ['.obsidian', '.git', '.github']
+
+def get_changed_files():
+    """Get list of files changed in the last commit"""
+    try:
+        output = subprocess.check_output(
+            ['git', 'diff', '--name-only', 'HEAD~1', 'HEAD'],
+            text=True
+        )
+        return [f for f in output.splitlines() if f]
+    except subprocess.CalledProcessError:
+        print("No git history? Falling back to uploading everything.")
+        return None
+
+def main():
+    timestamp = datetime.now().strftime('%Y%m%dT%H%M%S')
+    print(f"Timestamp: {timestamp}")
+
+    changed_files = get_changed_files()
+    is_full_upload = changed_files is None
+
+    manifest = {}
+    if os.path.exists('manifest.json'):
+        with open('manifest.json', 'r') as f:
+            manifest = json.load(f)
+
+    files_to_upload = []
+    if is_full_upload:
+        for root, dirs, files in os.walk('.'):
+            dirs[:] = [d for d in dirs if d not in EXCLUDED_DIRS]
+            for file in files:
+                if file in EXCLUDED:
+                    continue
+                local_path = os.path.join(root, file)
+                remote_prefix = os.path.dirname(local_path)
+                files_to_upload.append((local_path, remote_prefix))
+    else:
+        for file in changed_files:
+            if file in EXCLUDED or not os.path.exists(file):
+                continue
+            remote_prefix = os.path.dirname(file)
+            files_to_upload.append((file, remote_prefix))
+
+    for local_path, remote_prefix in files_to_upload:
+        ext = os.path.splitext(local_path)[1]
+        base_name = os.path.basename(local_path)
+        should_timestamp = ext in ['.md', '.json']
+
+        if should_timestamp:
+            name_without_ext = os.path.splitext(base_name)[0]
+            final_name = f"{name_without_ext}.{timestamp}{ext}"
+        else:
+            final_name = base_name
+
+        remote_path = os.path.join(remote_prefix, final_name).replace('\\', '/')
+        remote_path = remote_path.lstrip('./')
+
+        with open(local_path, 'rb') as f:
+            vercel_blob.put(remote_path, f.read())
+        print(f"uploaded: {remote_path}")
+
+        manifest[local_path] = remote_path
+
+    manifest_content = json.dumps(manifest, indent=2).encode('utf-8')
+    vercel_blob.put('manifest.json', manifest_content)
+    print("uploaded: manifest.json")
+
+if __name__ == "__main__":
+    main()

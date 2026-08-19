@@ -1,9 +1,9 @@
-name: Build blog index
+name: Build blog index and upload assets
 
 on:
   push:
     branches:
-      - main  # or your branch name
+      - main
 
 jobs:
   build:
@@ -14,18 +14,20 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 2  # Important: fetch at least 2 commits for git diff HEAD~1
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11'  # or whichever version you want
+        python-version: '3.11'
 
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pyyaml
+        pip install pyyaml vercel_blob python-dotenv
 
-    - name: Run build script
+    - name: Run build.py (generates build.json)
       run: python build.py
 
     - name: Commit and push updated build.json
@@ -39,25 +41,16 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'   # or your preferred version
+    - name: Run upload to Vercel Blob (only changed files)
+      run: python upload-to-vercel.py
 
-    - name: Install Node dependencies
-      run: npm install
-
-    - name: Run upload to Vercel script
-      run: node upload-to-vercel.js
-
-    - name: Commit and push updated timestamp.txt
+    - name: Commit and push updated manifest.json
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git add timestamp.txt
-        git diff --cached --quiet || git commit -m "auto-build: update timestamp.txt"
+        git add manifest.json timestamp.txt
+        git diff --cached --quiet || git commit -m "auto-build: update manifest and timestamp"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-

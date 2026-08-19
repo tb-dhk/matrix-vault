@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@vercel/blob": "^1.1.1",
-    "dotenv": "^16.5.0"
-  }
-}
