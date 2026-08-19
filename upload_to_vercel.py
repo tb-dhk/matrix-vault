@@ -8,7 +8,7 @@ import vercel_blob
 load_dotenv()
 
 EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload_to_vercel.py', 'manifest.json']
-EXCLUDED_DIRS = ['.obsidian', '.git', '.github']
+EXCLUDED_DIRS = ['.obsidian', '.git', '.github', ".trash"]
 
 def get_commit_hash():
     try:
@@ -35,18 +35,19 @@ def refresh_file(manifest, local_path, remote_path):
     old_path = manifest.get(local_path)
     if old_path and old_path != remote_path:
         try:
-            vercel_blob.delete(old_path)
+            # vercel_blob.delete(old_path)
             print(f"deleted old version: {old_path}")
         except Exception as e:
             print(f"Could not delete {old_path}: {e}")
     with open(local_path, 'rb') as f:
-        vercel_blob.put(remote_path, f.read())
+        # vercel_blob.put(remote_path, f.read())
+        pass
     print(f"uploaded: {remote_path}")
 
 
 def main(full=False):
     changed_files = get_changed_files()
-    is_full_upload = changed_files is None or full
+    is_full_upload = (changed_files is None) or full
 
     manifest = {}
     if os.path.exists('manifest.json'):
@@ -85,12 +86,13 @@ def main(full=False):
         remote_path = remote_path.lstrip('./')
 
         refresh_file(manifest, local_path, remote_path)
-
         manifest[local_path] = remote_path
 
-    with open("manifest.json", "w") as f:
-        json.dump(manifest, f, indent=2)
-    refresh_file(manifest, local_path, remote_path)
+    json.dump(manifest, open("manifest.json", "w"), indent=2)
+    vercel_blob.delete("manifest.json")
+    with open("manifest.json", 'rb') as f:
+        vercel_blob.put("manifest.json", f.read())
+    print("uploaded: manifest.json")
 
 if __name__ == "__main__":
-    main()
+    main(full=True)
