@@ -31,7 +31,7 @@ def get_changed_files():
         print("No git history? Falling back to uploading everything.")
         return None
 
-def main(full=True):
+def main(full=False):
     changed_files = get_changed_files()
     is_full_upload = changed_files is None or full
 
@@ -83,4 +83,4 @@ def main(full=True):
     print("uploaded: manifest.json")
 
 if __name__ == "__main__":
-    main(full=True)
+    main()
