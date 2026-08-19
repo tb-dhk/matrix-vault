@@ -49,8 +49,8 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git add manifest.json timestamp.txt
-        git diff --cached --quiet || git commit -m "auto-build: update manifest and timestamp"
+        git add manifest.json
+        git diff --cached --quiet || git commit -m "auto-build: update manifest"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
