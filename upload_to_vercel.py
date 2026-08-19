@@ -7,7 +7,7 @@ import vercel_blob
 
 load_dotenv()
 
-EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload-to-vercel.py', 'manifest.json']
+EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload_to_vercel.py', 'manifest.json']
 EXCLUDED_DIRS = ['.obsidian', '.git', '.github']
 
 def get_changed_files():
