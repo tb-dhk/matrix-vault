@@ -10,6 +10,15 @@ load_dotenv()
 EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.env', '.gitignore', 'upload_to_vercel.py', 'manifest.json']
 EXCLUDED_DIRS = ['.obsidian', '.git', '.github']
 
+def get_commit_hash():
+    try:
+        return subprocess.check_output(
+            ['git', 'rev-parse', 'HEAD'],
+            text=True
+        ).strip()
+    except subprocess.CalledProcessError:
+        return None
+
 def get_changed_files():
     """Get list of files changed in the last commit"""
     try:
@@ -51,11 +60,11 @@ def main():
     for local_path, remote_prefix in files_to_upload:
         ext = os.path.splitext(local_path)[1]
         base_name = os.path.basename(local_path)
-        should_timestamp = ext in ['.md', '.json']
+        should_stamp = ext in ['.md', '.json']
 
-        if should_timestamp:
+        if should_stamp:
             name_without_ext = os.path.splitext(base_name)[0]
-            final_name = f"{name_without_ext}.{timestamp}{ext}"
+            final_name = f"{name_without_ext}.{get_commit_hash()}{ext}"
         else:
             final_name = base_name
 
