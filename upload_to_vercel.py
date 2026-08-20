@@ -87,6 +87,8 @@ def main(full=False):
         refresh_file(manifest, local_path, remote_path)
         manifest[local_path] = remote_path
 
+    manifest["manifest.json"] = f"manifest.{get_commit_hash()}.json"
+
     json.dump(manifest, open("manifest.json", "w"), indent=2)
     vercel_blob.delete("manifest.json")
     with open("manifest.json", 'rb') as f:
