@@ -83,7 +83,8 @@ def main(full=False):
         else:
             final_name = base_name
 
-        local_path = local_path.lstrip("./")
+        if local_path.startswith("./"):
+            local_path = local_path[2:]
 
         remote_path = os.path.join(remote_prefix, final_name).replace('\\', '/')
         remote_path = remote_path.lstrip('./')
