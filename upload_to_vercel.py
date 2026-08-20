@@ -58,6 +58,8 @@ def refresh_file(manifest, local_path, remote_path):
 def main(full=False):
     changed_files = get_changed_files()
     is_full_upload = (changed_files is None) or full
+    if not is_full_upload:
+        print("changed files: ", changed_files)
 
     manifest = {}
     if os.path.exists('manifest.json'):
@@ -109,4 +111,4 @@ def main(full=False):
     print(f"uploaded: manifest.{get_commit_hash()}.json")
 
 if __name__ == "__main__":
-    main()
+    main(full=True)
