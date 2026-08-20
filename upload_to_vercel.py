@@ -83,13 +83,9 @@ def main(full=False):
     for local_path, remote_prefix in files_to_upload:
         ext = os.path.splitext(local_path)[1]
         base_name = os.path.basename(local_path)
-        should_stamp = ext in ['.md', '.json']
 
-        if should_stamp:
-            name_without_ext = os.path.splitext(base_name)[0]
-            final_name = f"{name_without_ext}.{get_commit_hash()}{ext}"
-        else:
-            final_name = base_name
+        name_without_ext = os.path.splitext(base_name)[0]
+        final_name = f"{name_without_ext}.{get_commit_hash()}{ext}"
 
         if local_path.startswith("./"):
             local_path = local_path[2:]
