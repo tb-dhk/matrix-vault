@@ -12,23 +12,26 @@ EXCLUDED_DIRS = ['.obsidian', '.git', '.github', ".trash"]
 
 def get_commit_hash():
     try:
+        # Get the commit hash of the upstream branch (e.g., origin/main)
         return subprocess.check_output(
-            ['git', 'rev-parse', 'HEAD'],
+            ['git', 'rev-parse', '@{u}'],
             text=True
         ).strip()
     except subprocess.CalledProcessError:
         return None
 
 def get_changed_files():
-    """Get list of files changed in the last commit"""
+    """Get list of files changed since the last push (against upstream branch)"""
     try:
+        # Diff between upstream and current HEAD
         output = subprocess.check_output(
-            ['git', 'diff', '--name-only', 'HEAD~1', 'HEAD'],
+            ['git', 'diff', '--name-only', get_commit_hash(), 'HEAD'],
             text=True
         )
         return [f for f in output.splitlines() if f]
     except subprocess.CalledProcessError:
-        print("No git history? Falling back to uploading everything.")
+        # No upstream (e.g., first push), fallback to full upload
+        print("No upstream branch found. Falling back to uploading everything.")
         return None
 
 def refresh_file(manifest, local_path, remote_path):
