@@ -11,14 +11,22 @@ EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.e
 EXCLUDED_DIRS = ['.obsidian', '.git', '.github', ".trash"]
 
 def get_commit_hash():
-    try:
-        # Get the commit hash of the upstream branch (e.g., origin/main)
-        return subprocess.check_output(
-            ['git', 'rev-parse', '@{u}'],
-            text=True
-        ).strip()
-    except subprocess.CalledProcessError:
+    if not os.path.exists('manifest.json'):
         return None
+    try:
+        with open('manifest.json', 'r') as f:
+            data = json.load(f)
+        # Look for the canonical manifest entry
+        manifest_entry = data.get('manifest.json')
+        if manifest_entry and manifest_entry.endswith('.json') and manifest_entry.startswith('manifest.'):
+            # Extract the hash from "manifest.<hash>.json"
+            hash_part = manifest_entry[len('manifest.'):-len('.json')]
+            if hash_part:
+                print(f"Found last successful commit in manifest: {hash_part}")
+                return hash_part
+    except Exception as e:
+        print(f"Could not read manifest: {e}")
+    return None
 
 def get_changed_files():
     """Get list of files changed since the last push (against upstream branch)"""
