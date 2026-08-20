@@ -101,12 +101,24 @@ def main(full=False):
         refresh_file(manifest, local_path, remote_path)
         manifest[local_path] = remote_path
 
-    local_manifest = manifest["manifest.json"]
+    local_manifest = "manifest.json"
     remote_manifest = f"manifest.{get_commit_hash()}.json"
-    manifest["manifest.json"] = remote_manifest
+
+    print("now uploading", remote_manifest)
+    old_manifest = manifest.get("manifest.json") # get old_manifest before reassigning
+    manifest[local_manifest] = remote_manifest
+
+    if old_manifest and old_manifest != remote_path:
+        try:
+            vercel_blob.delete(old_manifest)
+            print(f"deleted old version: {old_manifest}")
+        except Exception as e:
+            print(f"Could not delete {old_manifest}: {e}")
+    with open(local_manifest, 'rb') as f:
+        vercel_blob.put(remote_manifest, f.read())
+    print(f"uploaded: {remote_path}")
 
     json.dump(manifest, open("manifest.json", "w"), indent=2)
-    refresh_file(manifest, local_manifest, remote_manifest)
 
 if __name__ == "__main__":
     main()
