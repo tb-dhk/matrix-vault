@@ -67,7 +67,7 @@ def main(full=False):
                 files_to_upload.append((local_path, remote_prefix))
     else:
         for file in changed_files:
-            if file in EXCLUDED or not os.path.exists(file):
+            if file in EXCLUDED or any(file.startswith(i) for i in EXCLUDED_DIRS) or not os.path.exists(file):
                 continue
             remote_prefix = os.path.dirname(file)
             files_to_upload.append((file, remote_prefix))
@@ -87,7 +87,8 @@ def main(full=False):
             local_path = local_path[2:]
 
         remote_path = os.path.join(remote_prefix, final_name).replace('\\', '/')
-        remote_path = remote_path.lstrip('./')
+        if remote_path.startswith("./"):
+            remote_path = remote_path[2:]
 
         refresh_file(manifest, local_path, remote_path)
         manifest[local_path] = remote_path
