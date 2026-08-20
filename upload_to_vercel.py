@@ -32,6 +32,7 @@ def get_changed_files():
         return None
 
 def refresh_file(manifest, local_path, remote_path):
+    print("now uploading", remote_path)
     old_path = manifest.get(local_path)
     if old_path and old_path != remote_path:
         try:
