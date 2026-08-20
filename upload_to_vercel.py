@@ -103,6 +103,9 @@ def main(full=False):
     print("now uploading", remote_manifest)
     old_manifest = manifest.get("manifest.json") # get old_manifest before reassigning
     manifest[local_manifest] = remote_manifest
+    with open("manifest.json", "w") as f:
+        json.dump(manifest, f, indent=2)
+    print("updated local manifest.json")
 
     if old_manifest and old_manifest != remote_manifest:
         try:
@@ -113,8 +116,6 @@ def main(full=False):
     with open(local_manifest, 'rb') as f:
         vercel_blob.put(remote_manifest, f.read())
     print(f"uploaded: {remote_manifest}")
-
-    json.dump(manifest, open("manifest.json", "w"), indent=2)
 
 if __name__ == "__main__":
     main()
