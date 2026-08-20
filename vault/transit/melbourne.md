@@ -1,6 +1,6 @@
 ---
 title: how does melbourne's metro work?
-date: 2026-08-22
+date: 2026-08-21
 tags:
   - transit
   - metro
