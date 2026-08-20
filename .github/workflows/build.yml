@@ -30,16 +30,16 @@ jobs:
     - name: Run build.py (generates build.json)
       run: python build.py
 
-    - name: Commit and push updated build.json
+    - name: Run upload to Vercel Blob (only changed files)
+      run: python upload_to_vercel.py
+
+    - name: Commit and push updated build.json and manifest.json
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git add build.json
-        git diff --cached --quiet || git commit -m "auto-build: update build.json"
+        git add build.json manifest.json
+        git diff --cached --quiet || git commit -m "auto-build: update build.json and manifest.json"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Run upload to Vercel Blob (only changed files)
-      run: python upload_to_vercel.py
