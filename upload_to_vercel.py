@@ -81,6 +81,8 @@ def main(full=False):
         else:
             final_name = base_name
 
+        local_path = local_path.lstrip("./")
+
         remote_path = os.path.join(remote_prefix, final_name).replace('\\', '/')
         remote_path = remote_path.lstrip('./')
 
@@ -96,4 +98,4 @@ def main(full=False):
     print(f"uploaded: manifest.{get_commit_hash()}.json")
 
 if __name__ == "__main__":
-    main()
+    main(full=True)
