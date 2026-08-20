@@ -11,6 +11,13 @@ EXCLUDED = ['node_modules', 'package.json', 'package-lock.json', 'build.py', '.e
 EXCLUDED_DIRS = ['.obsidian', '.git', '.github', ".trash"]
 
 def get_commit_hash():
+    try:
+        cmd = ['git', 'rev-parse', 'HEAD']
+        return subprocess.check_output(cmd, text=True).strip()
+    except subprocess.CalledProcessError:
+        return None
+
+def upstream():
     if not os.path.exists('manifest.json'):
         return None
     with open('manifest.json', 'r') as f:
@@ -22,7 +29,7 @@ def get_changed_files():
     try:
         # Diff between upstream and current HEAD
         output = subprocess.check_output(
-            ['git', 'diff', '--name-only', get_commit_hash(), 'HEAD'],
+            ['git', 'diff', '--name-only', upstream(), 'HEAD'],
             text=True
         )
         return [f for f in output.splitlines() if f]
