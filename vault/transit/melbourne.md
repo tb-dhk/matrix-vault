@@ -14,11 +14,11 @@ melbourne is home to many places that are very important to me. not sentimentall
 
 victoria's passenger rail network has three (or four) main components, as detailed in the following table:
 
-| name                                        | company                | type                       | aim                                               | notes                                                                                                                                     |
-| ------------------------------------------- | ---------------------- | -------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [[#metro|melbourne metro]]                  | metro trains melbourne | commuter rail / heavy rail | connecting melbourne's suburbs to the city centre | despite its name, this is not a metro for the most part (other than the city loop).                                                       |
-| [[#v/line|v/line]]                          | v/line corporation     | regional commuter rail     | connecting melbourne to other parts of victoria   | v/line also runs coach services that include connections that do not involve melbourne, but we will not be covering them in this article. |
-| [[#suburban rail loop\|suburban rail loop]] | transitlinx            | automated rapid transit    | interconnectivity between melbourne's suburbs     | under construction; also not an actual loop                                                                                               |
+| name                                                             | company                | type                       | aim                                               | notes                                                                                                                                     |
+| ---------------------------------------------------------------- | ---------------------- | -------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [[#metro                                    \| melbourne metro]] | metro trains melbourne | commuter rail / heavy rail | connecting melbourne's suburbs to the city centre | despite its name, this is not a metro for the most part (other than the city loop).                                                       |
+| [[#v/line]]                                                      | v/line corporation     | regional commuter rail     | connecting melbourne to other parts of victoria   | v/line also runs coach services that include connections that do not involve melbourne, but we will not be covering them in this article. |
+| [[#suburban rail loop]]                                          | transitlinx            | automated rapid transit    | interconnectivity between melbourne's suburbs     | under construction; also not an actual loop                                                                                               |
 
 all assets are owned by victrack, a state-owned corporation, and leased to transport victoria, a government department. transport victoria then sub-leases operational rights to the respective companies.
 
@@ -26,12 +26,19 @@ all assets are owned by victrack, a state-owned corporation, and leased to trans
 
 in this article, i'll be going through each component and the history and infrastructure surrounding it.
 # metro
+the melbourne metro is mainly commuter rail, although certain infrastructure near the city (the [[#metro tunnel]] and [[#city loop]]) are heavy rail.
+
+> [!info] what are commuter and heavy rail?
+> **commuter rail** uses large trains to connect outer suburbs and city centers mostly during peak hours. these tracks are often shared with regional and intercity trains and have many at-grade crossings, i.e. intersections with roads at ground level.
+> 
+> **heavy rail** uses fully separated and dedicated urban tracks with high frequency and all-day service to move large crowds within a city. these services do not have any at-grade crossings and are thus able to operate completely independently of other transport networks.
+## ownership
 the melbourne metro system is owned by transport victoria and metro trains melbourne, which is a private joint venture between three companies:
 - MTR corporation (60%) - hong kong's government-owned transport operator and property developer that runs hong kong's MTR as well as several other countries, including australia
 - john holland (20%) - an oceania-based infrastructure, building, and rail transport services companies, owned by the china communications transport company, a state-owned engineering and construction firm
 - UGL rail (20%) - an australian rail company specialising in building, maintaining and refurbishing diesel locomotives
 ## lines
-the melbourne metro is basically the pinnacle of the hub-and-spoke model. the main hub is the city centre, best represented by the [[#city loop|city loop]], which branches out into several trunks from the city centre. each individual line then branches out further from the trunk to reach various different parts of melbourne. due to how the network is centered around a central hub, trains are usually referred to as "inbound" (towards the city centre) or "outbound" (towards the suburbs)
+the melbourne metro is basically the pinnacle of the hub-and-spoke model. the main hub is the city centre, best represented by the [[#city loop]], which branches out into several trunks from the city centre. each individual line then branches out further from the trunk to reach various different parts of melbourne. due to how the network is centered around a central hub, trains are usually referred to as "inbound" (towards the city centre) or "outbound" (towards the suburbs)
 
 there are a total of 15 main metro lines, which are usually grouped into 6 main groups based on the spoke they use. the groups going through the city loop are named after the last station all the lines share before they start branching out. each line is named after its terminus, with the exception of some lines that have been extended without any renaming, like the pakenham line that has since been extended to east pakenham.
 
@@ -44,7 +51,7 @@ here is some information about each group:
 | <span class="box" style="background-color: #152c6b; color: white">burnley</span>      | <                | dark blue  | lilydale, belgrave, alamein, glen waverley                                          | anticlockwise on weekday mornings, clockwise otherwise   | ^                                                                                                                     |
 | <span class="box" style="background-color: #ffbe00; color: black">northern</span>     | north melbourne  | yellow     | craigieburn, upfield                                                                | anticlockwise on weekday afternoons, clockwise otherwise | between southern cross and flagstaff                                                                                  |
 | <span class="box" style="background-color: #f178af; color: black">cross-city</span>   | n/a              | pink       | sandringham, werribee, williamstown                                                 | n/a (flinders street and southern cross only)            | between parliament and flinders street (sandringham)<br>between southern cross and flagstaff (williamstown, werribee) |
-| <span class="box" style="background-color: #279fd5; color: white">yarra</span>        | ^                | light blue | cranbourne, pakenham, sunbury, [[#airport rail\|airport rail (under construction)]] | n/a ([metro tunnel](#metro tunnel))                      |                                                                                                                       |
+| <span class="box" style="background-color: #279fd5; color: white">yarra</span>        | ^                | light blue | cranbourne, pakenham, sunbury, [[#airport rail\|airport rail (under construction)]] | n/a ([[#metro tunnel]])                                  |                                                                                                                       |
 
 there are two other special lines that are part of the metro network.
 
@@ -54,12 +61,6 @@ there are two other special lines that are part of the metro network.
 | flemington racecourse | grey   | runs clockwise from flinders street, parallel with the <span class="box" style="background-color: #ffbe00; color: black">northern</span> group until north melbourne | also called the special event line; only for special events happening at or near the racecourse, including races and university examinations |
 
 ## infrastructure
-the melbourne metro is a mix of commuter and heavy rail, where it is fully underground in the middle (city loop and metro tunnel) and above ground otherwise with many at-grade crossings.
-
-> [!info] what are commuter and heavy rail?
-> **commuter rail** uses large trains to connect outer suburbs and city centers mostly during peak hours. these tracks are often shared with regional and intercity trains and have many at-grade crossings. this is the case for most of the melbourne metro.
-> 
-> **heavy rail** uses fully separated and dedicated urban tracks with high frequency and all-day service to move large crowds within a city. this applies specifically to the city loop and metro tunnel, which are fully underground and reserved for melbourne metro trains.
 ### city loop
 the city loop is a loop consisting of 5 stations in melbourne's city centre. in clockwise order starting from the west, they are:
 - southern cross
@@ -89,11 +90,16 @@ when the city loop was fully commissioned in 1985, all metropolitan lines were f
 | <span class="box" style="background-color: #152c6b; color: white">burnley</span>                | dark blue | lilydale, belgrave, alamein, glen waverley                            |
 | <span class="box" style="background-color: #ffbe00; color: black">northern</span> | yellow    | werribee, williamstown, sunbury (then sydenham), craigieburn, upfield |
 ### formation of the <span class="box" style="background-color: #f178af; color: black">cross-city</span> group
-in 2011, the frankston line (<span class="box" style="background-color: #028430; color: white">caulfield</span>) as well as the werribee and williamstown lines (<span class="box" style="background-color: #ffbe00; color: black">northern</span>) were pulled out of their respective groups to form a new <span class="box" style="background-color: #f178af; color: black">cross-city</span> group where trains would simply run from one end to the other, through flinders street and southern cross stations.
+in 2011, the frankston line (<span class="box" style="background-color: #028430; color: white">caulfield</span>) was through-run with the werribee and williamstown lines (<span class="box" style="background-color: #ffbe00; color: black">northern</span>), and they were pulled out of their respective groups to form a new <span class="box" style="background-color: #f178af; color: black">cross-city</span> group. to relieve congestion in the city loop, these routes would only run through flinders street and southern cross stations and on separate tracks.
 ### opening of metro tunnel and formation of the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group
-when the metro tunnel was fully opened in 2026, yet another reassignment occured. the sunbury line (<span class="box" style="background-color: #ffbe00; color: black">northern</span>) as well as the pakenham and cranbourne lines (<span class="box" style="background-color: #028430; color: white">caulfield</span>) were extracted from the city loop and routed through the metro tunnel, creating the new <span class="box" style="background-color: #279fd5; color: white">yarra</span> group. 
+when the metro tunnel was fully opened in 2026, yet another reassignment occurred. the sunbury line (<span class="box" style="background-color: #ffbe00; color: black">northern</span>) was through-run with the pakenham and cranbourne lines (<span class="box" style="background-color: #028430; color: white">caulfield</span>) through the metro tunnel, creating the new <span class="box" style="background-color: #279fd5; color: white">yarra</span> group.
 
-additionally, the frankston line (<span class="box" style="background-color: #f178af; color: black">cross-city</span>) and sandringham line (<span class="box" style="background-color: #028430; color: white">caulfield</span>) swapped groups, meaning the frankston line was returned to the city loop and the <span class="box" style="background-color: #028430; color: white">caulfield</span> group, while the sandringham line became part of the <span class="box" style="background-color: #f178af; color: black">cross-city</span> group, pairing with the werribee and williamstown lines.
+additionally, the frankston line (<span class="box" style="background-color: #f178af; color: black">cross-city</span>) and sandringham line (<span class="box" style="background-color: #028430; color: white">caulfield</span>) swapped groups, meaning the frankston line was returned to the city loop and the <span class="box" style="background-color: #028430; color: white">caulfield</span> group, while the sandringham line became part of the <span class="box" style="background-color: #f178af; color: black">cross-city</span> group and was through-run with the werribee and williamstown lines.
+
+> [!info] what is through-running?
+> through-running is when a train continues running past a terminus instead of stopping and reversing direction, continuing onto another service. for example, sunbury line trains coming from the northwest do not terminate in the city centre, but instead continue onto the other <span class="box" style="background-color: #279fd5; color: white">yarra</span> group lines on the southeast (pakenham and cranbourne).
+> 
+> the melbourne metro system uses through-running to reduce congestion on the city loop. trains on lines that are not through-run have to reverse direction to return to their terminus, meaning they either have to go around the city loop or turn around at flinders street, both of which cause congestion since platform and track space are both limited. trains that are through-run no longer have to go around the whole city loop (the <span class="box" style="background-color: #f178af; color: black">cross-city</span> group) or avoid it entirely (the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group).
 ### summary table of all changes
 jesus fucking christ.
 
@@ -107,7 +113,7 @@ jesus fucking christ.
 | williamstown | ^                                                                                  | ^                                                                                   | <                                                                                   |
 | sunbury      | <span class="box" style="background-color: #ffbe00; color: black">northern</span>  | <                                                                                   | <span class="box" style="background-color: #279fd5; color: white">yarra</span>      |
 ## airport rail
-the airport rail is a new line to be integrated into the melbourne metro system. it will share tracks with the sunbury line starting from just west of sunshine station before heading towards the metro tunnel, making it effectively a part of the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group.
+the airport rail is a new line to be integrated into the melbourne metro system. it will share tracks with the sunbury line starting from albion station before heading towards the metro tunnel, making it effectively a part of the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group.
 # v/line
 the v/line system is victoria's regional rail system, which extends beyond melbourne to other parts of victoria. it is operated by v/line corporation, a statutory authority.
 
@@ -126,23 +132,24 @@ here is some information about the regional train lines:
 while v/line trains do pass through some stations on the city loop, they do not use the underground city loop tracks that are reserved for metro trains. instead, they use their own overground tracks.
 # suburban rail loop
 the main problem with the hub-and-spoke model is that interconnectivity between spokes (the suburbs) is poor. the suburban rail loop (SRL) is an automated rapid transit line that aims to fix this by going in an arc around melbourne. while not an actual closed loop, it will serve as a bypass that allows commuters to go to other parts of melbourne without having to go through the city.
-
+## ownership
 the suburban rail loop is run by transitlinx, a consortium of several companies:
-- john holland (see [[#metro|metro trains melbourne]])
+- john holland (see [[#ownership 1|metro trains melbourne]])
 - RATP dev - a subsidiary of RATP group that provides operations and maintenance of passenger transport services. RATP group is a french state-owned enterprise that operates public transport systems primarily in paris, france
 - alstom - a french multinational rail transport systems manufacturer
 - KBR - a major american engineering company
 - WSP - a canadian multinational engineering consultancy
+## network
 
 ![[srl.png|map of the suburban rail loop (and airport rail)]]
 
 the suburban rail loop has three main sections:
 - SRL east: runs from cheltenham to box hill
 - SRL north: runs from box hill to melbourne airport
-- SRL west: runs from weribee to sunshine
+- SRL west: runs from werribee to sunshine
 
 the [[#airport rail|melbourne airport rail line]] will serve as a link between SRL north and SRL west, since part of its route is from melbourne airport to sunshine.
 
-while SRL east is due to finish by 2035, the SRL project is taking place over several decades. SRL north is still in the final stages of proposal and SRL west does not have any publicly available plans as of yet.
+SRL east is due to finish by 2035, and SRL north is still in the final stages of proposal and set to finish by 2043. at the time of publishing, SRL west does not have any publicly available plans other than the two termini.
 # conclusion
 this concludes our brief venture into victoria's (although mostly melbourne's) metro system. despite how convoluted it is and how long their projects take, it's quite interesting to look at australia's biggest commuter rail system and its different layers in detail.
