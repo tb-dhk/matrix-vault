@@ -108,7 +108,7 @@ def main(full=False):
     old_manifest = manifest.get("manifest.json") # get old_manifest before reassigning
     manifest[local_manifest] = remote_manifest
 
-    if old_manifest and old_manifest != remote_path:
+    if old_manifest and old_manifest != remote_manifest:
         try:
             vercel_blob.delete(old_manifest)
             print(f"deleted old version: {old_manifest}")
@@ -116,7 +116,7 @@ def main(full=False):
             print(f"Could not delete {old_manifest}: {e}")
     with open(local_manifest, 'rb') as f:
         vercel_blob.put(remote_manifest, f.read())
-    print(f"uploaded: {remote_path}")
+    print(f"uploaded: {remote_manifest}")
 
     json.dump(manifest, open("manifest.json", "w"), indent=2)
 
