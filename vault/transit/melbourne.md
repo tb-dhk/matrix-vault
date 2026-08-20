@@ -1,6 +1,6 @@
 ---
 title: how does melbourne's metro work?
-date: 2026-08-22
+date: 2026-08-21
 tags:
   - transit
   - metro
@@ -8,7 +8,7 @@ number: 0
 hide: true
 description: a deep dive into victoria's passenger rail network
 ---
-as you can probably guess from the title and description, the title is a slight misnomer. i have recently been studying melbourne's metro system, but i quickly realised most maps of the melbourne metro also tend to include victoria's regional rail lines as well. this is mainly because melbourne has 5.4 million people, which is about 77% of victoria's total population (7.1 million), which makes victoria australia's most centralised state. melbourne's passenger rail network is thus also victoria's passenger rail network.
+as you can probably guess from the title and description, the title is a slight misnomer. i have recently been studying melbourne's metro system, but i quickly realised most maps of the melbourne metro also tend to include victoria's regional rail lines as well. this is mainly because melbourne has 5.4 million people, which is about 77% of victoria's 5total population (7.1 million), which makes victoria australia's most centralised state. melbourne's passenger rail network is thus also victoria's passenger rail network.
 
 melbourne is home to many places that are very important to me. not sentimentally, of course - i have lived in singapore for all but slightly less than two years of my life. however, the university of melbourne, where my parents met, and the many apartments (and one house) my parents lived in together during the late 1990s and early 2000s had a huge part to play in my conception and early childhood. while i do not remember much of my life there, i feel like some part of me wants to learn a bit more about the city where i spent some of my most foundational years in.
 
