@@ -96,4 +96,4 @@ def main(full=False):
     print(f"uploaded: manifest.{get_commit_hash()}.json")
 
 if __name__ == "__main__":
-    main()
+    main(full=True)
