@@ -101,13 +101,12 @@ def main(full=False):
         refresh_file(manifest, local_path, remote_path)
         manifest[local_path] = remote_path
 
-    manifest["manifest.json"] = f"manifest.{get_commit_hash()}.json"
+    local_manifest = manifest["manifest.json"]
+    remote_manifest = f"manifest.{get_commit_hash()}.json"
+    manifest["manifest.json"] = remote_manifest
 
     json.dump(manifest, open("manifest.json", "w"), indent=2)
-    vercel_blob.delete("manifest.json")
-    with open("manifest.json", 'rb') as f:
-        vercel_blob.put(f"manifest.{get_commit_hash()}.json", f.read())
-    print(f"uploaded: manifest.{get_commit_hash()}.json")
+    refresh_file(manifest, local_manifest, remote_manifest)
 
 if __name__ == "__main__":
     main()
