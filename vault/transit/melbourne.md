@@ -1,6 +1,6 @@
 ---
 title: how does melbourne's metro work?
-date: 2026-08-21
+date: 2026-08-22
 tags:
   - transit
   - metro
@@ -76,7 +76,7 @@ there are three special lines. other than the laverton line, these are usually l
 | flemington racecourse | grey   | runs clockwise from flinders street station to southern cross and north melbourne stations, then further northwest to showgrounds and flemington racecourse stations | it is also referred to as the special event line and used only for special events happening at or near the racecourse, including races and university examinations. unlike the stony point line, it does not share a colour with any group.                                                                                                                                                                                                                                                                        |
 | laverton              | pink   | part of the werribee line, but terminates at laverton instead of going to werribee.                                                                                  | it is part of the <span class="box" style="background-color: #f178af; color: black">cross-city</span> group and usually listed with the werribee and williamstown lines, but is poorly documented as its own line mainly due to the fact that it is basically just a service along the werribee line. it mainly exists as a separate line to help commuters easily differentiate between services before 19:00, since services ending at werribee skip stations while services running to laverton make all stops. |
 ### airport rail
-the airport rail is a future metropolitan line, currently under construction. starting from the melbourne airport, it will join the sunbury line starting from albion station before heading towards the metro tunnel, making it effectively a part of the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group.
+the airport rail is a future metropolitan line, currently under construction. starting from the melbourne airport, it will join the sunbury line at albion station before heading towards the metro tunnel, making it effectively a part of the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group.
 ## infrastructure
 ### city loop
 the city loop is a loop consisting of five stations in melbourne's city centre. in clockwise order starting from the west, they are:
