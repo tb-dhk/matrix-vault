@@ -21,6 +21,17 @@
     "hide": false,
     "description": "landing point"
   },
+  "/transit/melbourne": {
+    "title": "how does melbourne's metro work?",
+    "date": "2026-08-21",
+    "tags": [
+      "metro",
+      "transit"
+    ],
+    "number": 0,
+    "hide": false,
+    "description": "a deep dive into victoria's passenger rail network"
+  },
   "/development/dev diaries/matrix/matrix2": {
     "title": "how does matrix ACTUALLY work though",
     "description": "a sequel to the matrix dev diary",
