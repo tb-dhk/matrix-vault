@@ -14,11 +14,11 @@ melbourne is home to many places that are very important to me. not sentimentall
 
 victoria's passenger rail network has three (or four) main components, as detailed in the following table:
 
-| name                                                             | company                | type                       | aim                                               | notes                                                                                                                                     |
-| ---------------------------------------------------------------- | ---------------------- | -------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [[#metro                                    \| melbourne metro]] | metro trains melbourne | commuter rail / heavy rail | connecting melbourne's suburbs to the city centre | despite its name, this is not a metro for the most part (other than the city loop).                                                       |
-| [[#v/line]]                                                      | v/line corporation     | regional commuter rail     | connecting melbourne to other parts of victoria   | v/line also runs coach services that include connections that do not involve melbourne, but we will not be covering them in this article. |
-| [[#suburban rail loop]]                                          | transitlinx            | automated rapid transit    | interconnectivity between melbourne's suburbs     | under construction; also not an actual loop                                                                                               |
+| name                        | company                | type                       | aim                                               | notes                                                                                                                                     |
+| --------------------------- | ---------------------- | -------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [[#metro\|melbourne metro]] | metro trains melbourne | commuter rail / heavy rail | connecting melbourne's suburbs to the city centre | despite its name, this is not a metro for the most part (other than the city loop).                                                       |
+| [[#v/line]]                 | v/line corporation     | regional commuter rail     | connecting melbourne to other parts of victoria   | v/line also runs coach services that include connections that do not involve melbourne, but we will not be covering them in this article. |
+| [[#suburban rail loop]]     | transitlinx            | automated rapid transit    | interconnectivity between melbourne's suburbs     | under construction; also not an actual loop                                                                                               |
 
 all assets are owned by victrack, a state-owned corporation, and leased to transport victoria, a government department. transport victoria then sub-leases operational rights to the respective companies.
 
@@ -146,7 +146,7 @@ while v/line trains do pass through some stations on the city loop, they do not 
 if you're observant, you've probably noticed one huge flaw with the current hub-and-spoke model: there are no lines connecting the suburbs. the suburban rail loop (SRL) is an automated rapid transit line that aims to fix this by going in an arc around melbourne. while not an actual closed loop, it will serve as a bypass that allows commuters to go to other parts of melbourne without having to go through the city.
 ## ownership
 the suburban rail loop is run by transitlinx, a consortium of several companies:
-- john holland (see [[#ownership 1|metro trains melbourne]])
+- john holland (see [[#ownership|metro trains melbourne]])
 - RATP dev - a subsidiary of RATP group that provides operations and maintenance of passenger transport services. RATP group is a french state-owned enterprise that operates public transport systems primarily in paris, france
 - alstom - a french multinational rail transport systems manufacturer
 - KBR - a major american engineering company
