@@ -12,6 +12,10 @@ as you can probably guess from the title and description, the title is a slight 
 
 melbourne is home to many places that are very important to me. not sentimentally, of course - i have lived in singapore for all but slightly less than two years of my life. however, the university of melbourne, where my parents met, had a huge part to play in my conception and early childhood, and so did the many apartments (and one house) my parents lived in together during the late 1990s and early 2000s. while i do not remember much of my life there, i feel like some part of me wants to learn a bit more about the city where i spent some of my most foundational years.
 
+# overview
+> [!note] note
+> this article will contain some transit terminology that some readers may be unfamiliar with. for convenience's sake, they have been defined in info callout boxes.
+
 victoria's passenger rail network has three (or four) main components, as detailed in the following table:
 
 | name                        | company                | type                       | aim                                               | notes                                                                                                                                     |
@@ -26,7 +30,7 @@ all assets are owned by victrack, a state-owned corporation, and leased to trans
 
 in this article, i'll be going through each component and the history and infrastructure surrounding it.
 # metro
-the melbourne metro is mainly commuter rail, although some of the infrastructure near the city (the [[#metro tunnel]] and [[#city loop]]) is heavy rail.
+the melbourne metro is mainly commuter rail, although some of the infrastructure near the city centre (the [[#metro tunnel]] and [[#city loop]]) is heavy rail.
 
 > [!info] what are commuter and heavy rail?
 > **commuter rail** uses large trains to connect outer suburbs and city centers mostly during peak hours. these tracks are often shared with regional and intercity trains and have many at-grade crossings, which are intersections with roads at ground level.
@@ -59,12 +63,12 @@ the other two groups can be further split into two subgroups, where lines in one
 | <span class="box" style="background-color: #279fd5; color: white">yarra</span>      | light blue | sunbury, [[#airport rail\|airport rail (under construction)]] | cranbourne, pakenham | [[#metro tunnel]]                           |
 
 > [!note] note
-> the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group does not have an official name, although it was previously referred to as the <span class="box" style="background-color: #279fd5; color: white">dandenong</span> group pre-metro tunnel (see [[#formation of the <span class="box" style="background-color 028430; color white">cross-city</span> and <span class="box" style="background-color 279fd5; color white">dandenong</span> group (2011)|regrouping]]). it is often unofficially referred to as the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group by transit enthusiasts, as well as on wikipedia, so it will be called that throughout this article.
+> the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group does not have an official name, although it was previously referred to as the <span class="box" style="background-color: #279fd5; color: white">dandenong</span> group pre-metro tunnel (see [[#formation of the <span class="box" style="background-color 028430; color white">cross-city</span> and <span class="box" style="background-color 279fd5; color white">dandenong</span> group (2011)|regrouping]]). it is often unofficially referred to as the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group by transit enthusiasts, as well as on wikipedia, so it will be referred to as such throughout this article.
 > 
 > additionally, the subgroups used here are unofficial and only for the purpose of illustrating how the lines run through to each other.
 
 ### special lines
-there are three special lines. other than laverton, these are usually listed separately from other lines in the network map.
+there are three special lines. other than the laverton line, these are usually listed separately from other lines in the network map.
 
 | line                  | colour | route                                                                                                                                                                | notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -72,7 +76,7 @@ there are three special lines. other than laverton, these are usually listed sep
 | flemington racecourse | grey   | runs clockwise from flinders street station to southern cross and north melbourne stations, then further northwest to showgrounds and flemington racecourse stations | it is also referred to as the special event line and used only for special events happening at or near the racecourse, including races and university examinations. unlike the stony point line, it does not share a colour with any group.                                                                                                                                                                                                                                                                        |
 | laverton              | pink   | part of the werribee line, but terminates at laverton instead of going to werribee.                                                                                  | it is part of the <span class="box" style="background-color: #f178af; color: black">cross-city</span> group and usually listed with the werribee and williamstown lines, but is poorly documented as its own line mainly due to the fact that it is basically just a service along the werribee line. it mainly exists as a separate line to help commuters easily differentiate between services before 19:00, since services ending at werribee skip stations while services running to laverton make all stops. |
 ### airport rail
-the airport rail is a new line to be integrated into the melbourne metro system. starting from the melbourne airport, it will join the sunbury line starting from albion station before heading towards the metro tunnel, making it effectively a part of the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group.
+the airport rail is a future metropolitan line, currently under construction. starting from the melbourne airport, it will join the sunbury line starting from albion station before heading towards the metro tunnel, making it effectively a part of the <span class="box" style="background-color: #279fd5; color: white">yarra</span> group.
 ## infrastructure
 ### city loop
 the city loop is a loop consisting of five stations in melbourne's city centre. in clockwise order starting from the west, they are:
