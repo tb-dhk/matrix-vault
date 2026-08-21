@@ -28,7 +28,7 @@ all assets are owned by victrack, a state-owned corporation, and leased to trans
 
 ![[network.png|full map of the current victorian train network]]
 
-in this article, i'll be going through each component and the history and infrastructure surrounding it.
+this article will talk about each network as well as some of the history and infrastructure surrounding it.
 # metro
 the melbourne metro is mainly commuter rail, although some of the infrastructure near the city centre (the [[#metro tunnel]] and [[#city loop]]) is heavy rail.
 
